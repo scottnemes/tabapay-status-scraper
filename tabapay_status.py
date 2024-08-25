@@ -12,7 +12,7 @@ def main():
     headings = status_table.find_all("th", string=lambda text: text != "Environment")
     statuses = status_table.find_all("td", class_="n1")
 
-    header_list = [heading.text.strip() for heading in headings ]
+    header_list = [heading.text.strip() for heading in headings]
     status_list = [status.text.strip().replace("✔ ", "") for status in statuses]
 
     service_status = {}
